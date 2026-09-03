@@ -374,7 +374,7 @@ document.getElementById('tokenSaveBtn').onclick = () => {
 };
 
 async function loadOptions(){
-  const configured = GIST_ID && GIST_ID !== 'PASTE_YOUR_GIST_ID_HERE';
+  const configured = GIST_ID && GIST_ID !== '2d415e95064094fa0eae61b02524a6a4';
   if(!configured){
     options = DEFAULTS.slice();
     applyOwnerUI();
@@ -395,7 +395,7 @@ async function loadOptions(){
 }
 
 async function saveOptions(){
-  const configured = GIST_ID && GIST_ID !== 'PASTE_YOUR_GIST_ID_HERE';
+  const configured = GIST_ID && GIST_ID !== '2d415e95064094fa0eae61b02524a6a4';
   if(!configured || !ownerToken) return;
   try{
     const res = await fetch('https://api.github.com/gists/' + GIST_ID, {
